@@ -3,7 +3,7 @@ package sorters;
 import utils.Utils;
 
 /**
- * @author Marcos
+ * @author Marcos Placona
  * Purpose: To sort an array using Bubble sort
  * Method:  Starts at the beginning of the data set. It compares the first two elements, and if the first is greater than the second, 
  * 			it swaps them. It continues doing this for each pair of adjacent elements to the end of the data set. It then starts again with the first two 

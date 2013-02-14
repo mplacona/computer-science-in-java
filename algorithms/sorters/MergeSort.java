@@ -2,6 +2,14 @@ package sorters;
 
 import utils.Utils;
 
+/**
+ * @author Marcos Placona
+ * Purpose: To sort an array using Merge sort
+ * Method:  Divides the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).
+ * 			Repeatedly merge sublists to produce new sublists until there is only 1 sublist remaining. This will be the sorted list.
+ * Visual:	http://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif
+ */
+
 public class MergeSort extends Utils implements ISort {
 	private int arr[];
 	

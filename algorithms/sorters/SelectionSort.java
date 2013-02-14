@@ -3,7 +3,7 @@ package sorters;
 import utils.Utils;
 
 /**
- * @author Marcos
+ * @author Marcos Placona
  * Purpose: To sort an array using Selection sort
  * Method:  Finds the minimum value, swaps it with the value in the first position and repeats this steps for the remainder of the list
  * Visual:	http://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif
