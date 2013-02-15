@@ -11,46 +11,81 @@ import utils.Utils;
  */
 
 public class MergeSort extends Utils implements ISort {
-	private int arr[];
+	private int[] numbers;
+	private int[] helperNumbers;
+	private int number;
 	
 	public static void main(String[] args) {
-		MergeSort merge = new MergeSort(arrNumbers);
-		merge.sort();
+		MergeSort bubble = new MergeSort(arrNumbers);
+		bubble.sort();
+		print(arrNumbers);
 	}
 	
-	public MergeSort(int[] arr) {
+	public MergeSort(int arr[]){
 		super();
-		this.arr = arr;
+		this.numbers = arr;
+		number = arr.length;
+		this.helperNumbers = new int[number];
 	}
-	
+
 	@Override
-	public void sort() {
-		merge_sort(arr);
+	public void sort() {	
+		mergesort(0, number -1);
+	}
+
+	private void mergesort(int low, int high) {
+		if(low < high){
+			// add up low and high and divide by two to get middle (int truncates it just how we want it)
+			int middle = (low + high) / 2;
+			
+			// sort the left side of the array
+			mergesort(low, middle);
+			
+			//and now sort the right side of the array
+			mergesort(middle + 1, high);
+			
+			// all sorted, now let's merge
+			merge(low, middle, high);
+			
+		}
+		
+	}
+
+	private void merge(int low, int middle, int high) {
+		// time to use our helper array create way above. We'll copy both parts into it
+		for(int i = low; i <= high; i++){
+			try{
+				helperNumbers[i] = numbers[i];
+			}
+			catch( Exception e){
+				e.printStackTrace();
+			}
+		}
+		
+		int i = low;
+		int j = middle + 1;
+		int k = low;
+		
+		// let's copy the smallest values from either side back to the original array
+		while(i <= middle && j <= high){
+			// make a decision about which one is the smalles and copy it
+			if(helperNumbers[i] <= helperNumbers[j]){
+				numbers[k] = helperNumbers[i];
+				i++;
+			}
+			else{
+				numbers[k] = helperNumbers[j];
+				j++;
+			}
+			k++;
+		}
+		// copy the remaining into the target array
+		while(i <= middle){
+			numbers[k] = helperNumbers[i];
+			k++;
+			i++;
+		}
+		
 	}
 	
-	private int[] merge_sort(int[] arr){
-		if(arr.length == 1){
-			return arr;
-		}
-		else{
-			int n = (int) Math.floor(arr.length/2);
-			int B[] = new int[n];
-			int C[] = new int [arr.length-n];
-			int i;
-			for(i = 0; i < arr.length; ++i){
-				//divide the array into the two sub-arrays
-				if(i<n){
-					B[i] = arr[i];
-				}
-				else{
-					C[i-n] = arr[i];
-				}
-			}
-			B = merge_sort(B);
-			C = merge_sort(C);
-			//print(B);
-			//print(C);
-			return arr;
-		}
-	}
 }
