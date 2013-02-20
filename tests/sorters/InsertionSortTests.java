@@ -1,7 +1,6 @@
-package tests;
+package sorters;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.util.Arrays;
 
@@ -9,23 +8,23 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorters.ISort;
-import sorters.SelectionSort;
+import sorters.InsertionSort;
 
-public class SelectionSortTests {
-	private ISort selection;
+public class InsertionSortTests {
+	private ISort insertion;
 	private int arr[] = {5,4,3,2,1,0};
 
-	public SelectionSortTests() {
+	public InsertionSortTests() {
 	}
 
 	@Before
 	public void setUp() throws Exception {
-		selection = new SelectionSort(arr);
+		insertion = new InsertionSort(arr);
 	}
 
 	@Test
 	public void testObjectIsCreated() {
-		assertTrue(selection instanceof SelectionSort);
+		assertTrue(insertion instanceof InsertionSort);
 	}
 	
 	@Test
@@ -36,8 +35,8 @@ public class SelectionSortTests {
 		int[] arrExpected = arr.clone();
 		Arrays.sort(arrExpected);
 		
-		SelectionSort  selection = new SelectionSort(arrToSort);
-		selection.sort();
+		InsertionSort insertion = new InsertionSort(arrToSort);
+		insertion.sort();
 		assertArrayEquals(arrExpected, arrToSort);
 	}
 

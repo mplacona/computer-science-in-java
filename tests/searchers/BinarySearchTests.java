@@ -1,4 +1,4 @@
-package tests;
+package searchers;
 
 import static org.junit.Assert.*;
 
