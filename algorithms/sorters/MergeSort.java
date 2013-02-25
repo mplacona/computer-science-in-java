@@ -16,8 +16,8 @@ public class MergeSort extends Utils implements ISort {
 	private int number;
 	
 	public static void main(String[] args) {
-		MergeSort bubble = new MergeSort(arrNumbers);
-		bubble.sort();
+		MergeSort merge = new MergeSort(arrNumbers);
+		merge.sort();
 		print(arrNumbers);
 	}
 	
