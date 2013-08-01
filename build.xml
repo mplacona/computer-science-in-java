@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!-- to save as "build.xml" -->
+   
+<project name="computer-science-in-java" default="test" basedir=".">
+  <!-- build all classes in this directory -->
+  <!-- need to include junit.jar in the classpath -->
+  
+  <property name="tst-dir" value="tests" />
+  <path id="classpath.base" />
+
+  <path id="classpath.test">
+    <pathelement location="lib/junit-4.11.jar" />
+    <pathelement location="${tst-dir}" />
+    <path refid="classpath.base" />
+  </path>
+
+  <target name="test" depends="run, clean" />
+
+  <target name="build">
+    <javac srcdir="${basedir}">
+        <classpath refid="classpath.test"/>
+    </javac>
+    <echo message="Build done" />
+  </target>
+   
+  <!-- Test and build all files  -->
+  <!-- To run this: use "ant" (default) or "ant run" -->
+  <target name="run" depends="build">
+    <junit printsummary="on" haltonfailure="yes" failureProperty="test.failure">
+        <classpath refid="classpath.test" />
+        <formatter type="brief" usefile="false" />
+        <batchtest>
+            <fileset dir="${tst-dir}" includes="**/Test*.class" />
+        </batchtest>
+    </junit>
+    <fail message="test failed" if="test.failure" />
+  </target>
+   
+  <!-- delete all class files -->
+  <!-- To run this: use "ant clean" -->
+  <target name="clean">
+    <delete>
+        <fileset dir="${basedir}" includes="*.class" />
+    </delete>
+    <echo message="clean done" />
+  </target>
+</project>
