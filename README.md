@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/mplacona/computer-science-in-java.png?branch=master)](https://travis-ci.org/mplacona/computer-science-in-java)
 
 # Computer Science in Java
-====================
+------
 All the famous Computer Science Algorithms in one place
 
 ## Algorithms
@@ -20,7 +20,7 @@ All the famous Computer Science Algorithms in one place
 - Run `ant test`
 
 ## Contribute
-Github is all about contributions. So why not add your algorith here?
+Github is all about contributions. So why not add your algorithm here?
 
 ## License
 Copyright (c) 2013 [@marcos_placona](https://twitter.com/marcos_placona), [Marcos Placona](https://plus.google.com/111557456465418142877).  
