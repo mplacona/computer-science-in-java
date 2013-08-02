@@ -17,7 +17,7 @@
   <target name="test" depends="run, clean" />
 
   <target name="build">
-    <javac srcdir="${basedir}">
+    <javac srcdir="${basedir}" includeantruntime="false">
         <classpath refid="classpath.test"/>
     </javac>
     <echo message="Build done" />
