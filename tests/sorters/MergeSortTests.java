@@ -8,8 +8,8 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import sorters.MergeSort;
-import sorters.ISort;
+import uk.co.placona.algorithms.sorters.MergeSort;
+import uk.co.placona.algorithms.sorters.ISort;
 
 public class MergeSortTests {
 	private ISort merge;

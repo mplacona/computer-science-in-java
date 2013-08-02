@@ -7,8 +7,8 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import sorters.ISort;
-import sorters.InsertionSort;
+import uk.co.placona.algorithms.sorters.ISort;
+import uk.co.placona.algorithms.sorters.InsertionSort;
 
 public class InsertionSortTests {
 	private ISort insertion;

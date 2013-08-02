@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import searchers.BinarySearch;
+import uk.co.placona.algorithms.searchers.BinarySearch;
 
 public class BinarySearchTests {
 

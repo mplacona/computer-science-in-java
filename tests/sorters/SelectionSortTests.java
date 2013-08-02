@@ -8,8 +8,8 @@ import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import sorters.ISort;
-import sorters.SelectionSort;
+import uk.co.placona.algorithms.sorters.ISort;
+import uk.co.placona.algorithms.sorters.SelectionSort;
 
 public class SelectionSortTests {
 	private ISort selection;

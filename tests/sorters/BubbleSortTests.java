@@ -7,9 +7,8 @@ import java.util.Arrays;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import sorters.BubbleSort;
-import sorters.ISort;
+import uk.co.placona.algorithms.sorters.BubbleSort;
+import uk.co.placona.algorithms.sorters.ISort;
 
 public class BubbleSortTests {
 	private ISort bubble;
