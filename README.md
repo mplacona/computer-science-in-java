@@ -15,6 +15,9 @@ All the famous Computer Science Algorithms in one place
 - Merge Sort
 - Selection Sort
 
+### Hash
+- SHA256
+
 ## Quick Start
 - Clone or download this repo.
 - Run `ant test`
